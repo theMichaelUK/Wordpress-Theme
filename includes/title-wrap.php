@@ -1,18 +1,20 @@
-<section class="title_wrap">
-	<div class="wrapper">
-		<h1>
+<section class="background_dark">
+	<article>
+		<header>
+			<h1>
+				<?php
+					if (isset( $page['title'] )) {
+						echo $page['title'];
+					} else {
+						echo the_title();
+					}
+				?>
+			</h1>
 			<?php
-				if (isset( $page['title'] )) {
-					echo $page['title'];
-				} else {
-					echo the_title();
-				}
-			?>
-		</h1>
-		<?php
 			if (isset( $page['subtitle'] )) {
-				echo '<h4>' . $page['subtitle'] . '</h4>';
+				echo '<p>' . $page['subtitle'] . '</p>';
 			}
 		?>
-	</div>
+		</header>
+	</article>
 </section>

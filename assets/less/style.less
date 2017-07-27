@@ -1,29 +1,38 @@
-@max_width: 1000px;
+@max_width: 1200px;
 @mobile_width: 640px;
 @tablet_width: 767px;
 @min_width: 320px;
 
-@base_font: 14px;
+@base_font: 18;
 
 @main_colour: #DD2220;
 
 /* breakpoints */
 @mobile: ~"(max-width: @{mobile_width})";
 @tablet: ~"(max-width: @{tablet_width})";
-@desktop: ~"(min-width: 801px)";
+@desktop: ~"(min-width: 766px)";
 
 @import 'reset.less';
 @import 'mixins.less';
 @import 'dynamic.less';
 
+html {
+	font-size: @base_font + 0px;
+}
+
 body {
 	position: relative;
 	font-family: @body_font;
-	font-size: @base_font;
-	line-height: 120%;
+	.rems(18);
+	font-weight: 300;
 	background: #fff;
     min-height: 100vh;
     min-width: 320px;
+    color: #333;
+
+    @media @mobile {
+	    font-size: 16px;
+    }
 }
 
 .site_container {
