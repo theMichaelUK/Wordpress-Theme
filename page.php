@@ -13,7 +13,7 @@ while ( have_posts() ) { the_post();
 
 <section class="container_wrap">
 
-	<div class="wrapper">
+	<article>
 
 		<div class="content_wrap">
 
@@ -23,7 +23,7 @@ while ( have_posts() ) { the_post();
 
 		</div>
 
-	</div>
+	</article>
 
 </section>
 

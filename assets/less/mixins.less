@@ -72,3 +72,10 @@
     -ms-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
+
+.rems(@value) {
+    @rem_value : (@value / @base_font);
+    @lh_value : ((@value + 4) / @base_font);
+    font-size: ~"@{rem_value}rem";
+    line-height:  ~"@{lh_value}rem";
+}
